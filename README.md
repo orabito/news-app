@@ -1,16 +1,21 @@
-# news_app
+# News Application  
 
-A new Flutter project.
+A Flutter-based news app that fetches and displays the latest articles with optimized image handling and responsive UI.  
 
-## Getting Started
+## Features  
+- Displays news articles with titles, subtitles, and images.  
+- Implements a fallback mechanism for image loading with default placeholders.  
+- Ensures stable performance even if articles are removed or images fail to load.  
+- Displays a user-friendly message if an article is deleted from the source.  
 
-This project is a starting point for a Flutter application.
+## How It Works  
+- Fetches articles dynamically and renders them in a clean and readable format.  
+- Uses `CachedNetworkImage` and `Image.network` with an error-handling mechanism to ensure seamless user experience.  
 
-A few resources to get you started if this is your first Flutter project:
+## Error Handling  
+- If an article's image fails to load:  
+  - A default placeholder image is displayed.  
+  - The app avoids crashes by handling exceptions gracefully.  
+- If an article is deleted or unavailable:  
+  - A clear message ("The article has been removed.") is displayed instead of leaving an empty or broken layout.  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
